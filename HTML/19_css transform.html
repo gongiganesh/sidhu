@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css transform5</title>
+	<style>
+		body
+		{
+			background-color:black;
+		}
+		div
+		{
+			border:3px solid black;
+			width:400px;
+			height:300px;
+			box-shadow:0 0 10px black;
+			margin:100px auto;
+			border-radius:20px;
+			overflow:hidden;
+			position:relative;
+		}
+		div img
+		{
+			width:inherit;
+			height:inherit;
+			border-radius:inherit;
+			filter:grayscale(100%);
+			transition:all 15s;
+		}
+	    div	#left
+		{
+			width:189px;
+			height:300px;
+			background-color:gold;
+			position:absolute;
+			top:-102px;
+			left:1px;
+			transition:all 9s ease-in-out;
+			transform-origin:left;
+		}
+	    div	#right
+		{
+			width:200px;
+			height:300px;
+			background-color:gold;
+			position:absolute;
+			top:-102px;
+			left:199px;
+			transition:all 9s ease-in-out;
+		    transform-origin:right;
+		}
+		div #wrapper
+		{
+			background:linear-gradient(45deg,cyan,violet,pink);
+			position:absolute;
+			top:-100px;
+			left:0px;
+			transition:all 3s ease-in-out;
+		}
+		div:hover #wrapper
+		{
+			transform:translatey(-100%);
+		}
+		div:hover #left 
+		{
+			transform: rotatey(-90deg);
+		}
+		div:hover #right
+		{
+			transform: rotatey(-90deg);
+		}
+		div:hover img
+		{
+			transform:scale(1.5,1.5);
+			filter:grayscale(0%);
+		}
+	</style>	
+</head>
+<body>
+    <div>
+    	<img src="bike.jpg">
+
+    	<div id="left"> </div>
+    	<div id="right"></div>
+        <div id="wrapper"></div>
+    </div>	
+</body>
+</html
